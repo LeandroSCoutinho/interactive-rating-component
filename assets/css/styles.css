@@ -27,12 +27,15 @@ body{
     height: 100vh;
     background-color: var(--very-dark-blue);
 }
-.main-content{
+.main-content, .secundary-content{
     width: 90%;
     height: 45rem;
     background-color: var(--dark-blue);
     border-radius: 30px;
     padding: 30px;
+    color: var(--light-grey);
+    font-size:1.5rem;
+    font-weight: var(--weight-medium);
 }
 .main-content .icon-star{
     display: grid;
@@ -48,11 +51,6 @@ body{
     font-size: 2.5rem;
     font-weight: var(--weight-bold);
     margin: 30px 0;
-}
-.main-content p{
-    color: var(--light-grey);
-    font-size:1.5rem;
-    font-weight: var(--weight-medium);
 }
 .rating-numbers{
     display: flex;
@@ -98,4 +96,15 @@ body{
 
 .secundary-content{
     display:none;
+    position: absolute;
+}
+.secundary-content span{
+    color: var(--orange);
+}
+
+@media(min-width: 380px){
+    .main-content, .secundary-content {
+        min-width: 372px;
+        max-width: 380px;
+    }
 }
